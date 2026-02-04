@@ -10,9 +10,15 @@ We will only call CPUs in the regular workflow to make this workflow as realizab
 
 ## GPU Acceleration
 
-(The GPU workflow is only verified on Windows so far.)
+(The GPU workflow is only for Windows so far.)
 <br>
-(We noticed that GPU mode only supports one CPU core to do the pre/post processing, and hence the workflow is slowed down. There will be an update as soon as we fixed it.)
+(We noticed that GPU mode only supports one CPU thread to do the pre/post processing, and hence the workflow is unfortunately slowed down. There will be an update as soon as we fixed it.)
+
+![Alt text](./readme_img/cpu.png)
+<p align="center">All the available CPU threads are called in the CPU mode.</p>
+
+![Alt text](./readme_img/gpu.png)
+<p align="center">Only one CPU threads is called in the GPU mode :(</p>
 
 Please download the deep learning model [weights](https://mitprod-my.sharepoint.com/:u:/g/personal/bbillot_mit_edu/Ebqxo6YgUmBJkOML0m8NSXgBrhaHG7iqClFXRXPinS6FGw?e=DzKf1p) and paste the files to ./models folder.
 
