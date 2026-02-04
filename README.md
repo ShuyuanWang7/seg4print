@@ -24,11 +24,10 @@ python -m pip install -r requirements_python3.8.txt
 
 After successful installment, run the segmentation command in the repository folder via your environment. (This will be a convention for every time use.) 
 <br>
-You can indicate your input and output .nii file name by ```--i``` and ```--o```.
+1. You can indicate your input and output .nii file name by ```--i``` and ```--o```.
 <br>
-You can indicate the number of CPU cores called for this processing by ```--threads```. The more threads gety involved, the quicker result you can get, but always keep in mind this number can not exceed the cores you owned.  
-<br>
-You can always crop the MRI model to indicate the region of interest by ```--crop```. It follows the DICOM coordinate(LPS).
+2. You can indicate the number of CPU cores called for this processing by ```--threads```. The more threads gety involved, the quicker result you can get, but always keep in mind this number can not exceed the cores you owned.  
+3. You can always crop the MRI model to indicate the region of interest by ```--crop```. It follows the DICOM coordinate(LPS).
 
 ```powershell
 conda activate env_name
