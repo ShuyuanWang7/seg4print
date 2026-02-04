@@ -22,10 +22,23 @@ cd your/address/to/seg4print
 python -m pip install -r requirements_python3.8.txt
 ```
 
+After successful installment, run the segmentation command in the repository folder via your environment. (This will be a convention for every time use.) 
+<br>
+You can indicate your input and output .nii file name by ```--i``` and ```--o```.
+<br>
+You can indicate the number of CPU cores called for this processing by ```--threads```. The more threads gety involved, the quicker result you can get, but always keep in mind this number can not exceed the cores you owned.  
+<br>
+You can always crop the MRI model to indicate the region of interest by ```--crop```. It follows the DICOM coordinate(LPS).
+
 ```powershell
-
-
+conda activate env_name
+cd your/address/to/seg4print
 python ./scripts/commands/SynthSeg_predict.py --i ./input.nii --o ./output.nii --cpu --threads 20 --crop 160 192 160
+```
+
+After you get the segmentation result as ```output.nii```, call the following command to translate it into left and right sliced STL files to print. The STL files will be saved in the same folder automatically. We scale the brain model to 1/8 by default in order to print it in no time. Feel free to change the argument ```--scale``` by need. 
+
+```powershell
 python gwm_stl.py --nii "./output.nii" --scale 0.125
 ```
 
