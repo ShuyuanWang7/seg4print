@@ -48,10 +48,6 @@ Werkzeug==2.2.3
 wrapt==1.15.0
 zipp==3.15.0
 
-# Added for STL export / cutting utilities in this repo (gwm_stl.py, cut.py)
-trimesh
-scikit-image
-shapely
-rtree
-mapbox-earcut
-manifold3d
+trimesh==4.10.1
+scikit-image==0.19.3
+
