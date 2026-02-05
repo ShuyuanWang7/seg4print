@@ -33,10 +33,12 @@ cd your/address/to/seg4print
 python ./scripts/commands/SynthSeg_predict.py --i ./input.nii --o ./output.nii --cpu --threads 20 --crop 160 192 160
 ```
 
-After you get the segmentation result as ```output.nii```, call the following command to translate it into left and right sliced STL files to print. The STL files will be saved in the same folder automatically. We scale the brain model to 1/8 by default in order to print it in no time. Feel free to change the argument ```--scale``` by need. 
+After you get the segmentation result as ```output.nii```, call the following command to translate it into left and right sliced STL files to print. The STL files will be saved in the same folder automatically. 
+- We scale the brain model to 1/8 by default  ```--scale 0.125```  in order to print it in no time. Feel free to change the argument by need. 
+- By default, we only get STL models for left white and gray matters ```--left-labels [2 3]``` and right white and gray matters ```--right-labels [41 42]```. If you want to print more brain regions, please feel free to change the indexes following the [label map](./data/labels%20table.txt).
 
 ```powershell
-python gwm_stl.py --nii "./output.nii" --scale 0.125
+python gwm_stl.py --nii "./output.nii" 
 ```
 
 ## GPU Acceleration
