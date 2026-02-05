@@ -6,7 +6,7 @@ This is a repository forked from [SynthSeg](https://github.com/BBillot/SynthSeg)
 
 Please download the deep learning model [weights](https://mitprod-my.sharepoint.com/:u:/g/personal/bbillot_mit_edu/Ebqxo6YgUmBJkOML0m8NSXgBrhaHG7iqClFXRXPinS6FGw?e=DzKf1p) and paste the files to ./models folder.
 
-We will only call CPUs in the regular workflow to make it as realizable as possible. The whole processing should be done within 30 seconds. (Since the code is based on ```tensorflow==2.2.0```, it only supports Windows and Intel-Mac operation systems right now.)
+We will only call CPUs in the regular workflow to make it as realizable as possible. The whole processing should be done within 30 seconds. (Since the code is based on ```tensorflow==2.2.0```, it only supports Windows and Intel-Mac operation systems right now. For M-series Macs, please follow the Docker pipeline in the GPU chapter. You can still call CPU mode once the docker environment is well-configured.)
 
 Please download and configure [Anaconda](https://www.anaconda.com/download) on your device. Launch a conda terminal and create a new envrionment with ```python==3.8```. You can customize the environment name as you like. 
 
